@@ -1117,6 +1117,108 @@ footer {
   border-top: 1px solid var(--gray-200);
 }
 .nav.open .nav-links a { font-size: 15px; }
+
+/* ============================================================
+   HERO REGISTER LINK
+   ============================================================ */
+.hero-register-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+  max-width: 380px;
+}
+.hero-register-link:hover {
+  background: rgba(255,255,255,0.13);
+  border-color: rgba(125,192,240,0.55);
+  transform: translateY(-2px);
+}
+.hero-register-icon {
+  width: 38px; height: 38px;
+  background: var(--blue-500);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.hero-register-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.hero-register-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-300);
+  line-height: 1;
+}
+.hero-register-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   HERO REGISTER LINK
+   ============================================================ */
+.hero-register-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  background: rgba(255,255,255,0.07);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 14px;
+  padding: 14px 20px;
+  text-decoration: none;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+  max-width: 400px;
+}
+.hero-register-link:hover {
+  background: rgba(255,255,255,0.13);
+  border-color: rgba(125,192,240,0.55);
+  transform: translateY(-2px);
+}
+.hero-register-icon {
+  width: 38px; height: 38px;
+  background: var(--blue-500);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.hero-register-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.hero-register-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-300);
+  line-height: 1;
+}
+.hero-register-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.3;
+}
 </style>
 </head>
 <body>
@@ -1176,6 +1278,13 @@ footer {
           <span>→</span> Learn More
         </a>
       </div>
+      <a href="https://forms.office.com/r/k35wDLhSf0" target="_blank" rel="noopener noreferrer" class="hero-register-link">
+        <span class="hero-register-icon">📋</span>
+        <span class="hero-register-text">
+          <span class="hero-register-label">Registration of Interest</span>
+          <span class="hero-register-desc">Fill out the subject registration form &nbsp;↗</span>
+        </span>
+      </a>
     </div>
 
     <div class="hero-visual">
@@ -1454,7 +1563,7 @@ footer {
             <div class="ethics-divider"></div>
             <div class="ethics-field">
               <div class="ethics-field-label">Approving Body</div>
-              <div class="ethics-field-value">Sunway University Research Ethics Committee </div>
+              <div class="ethics-field-value">Sunway University Research Ethics Committee</div>
             </div>
             <div class="ethics-divider"></div>
             <div class="ethics-field">
@@ -1534,6 +1643,12 @@ footer {
         <a href="mailto:yunxint@sunway.edu.my" style="display:inline-flex;align-items:center;gap:10px;background:var(--blue-500);color:white;padding:14px 28px;border-radius:100px;font-size:14px;font-weight:700;transition:background 0.25s,transform 0.25s;margin-top:8px;" onmouseover="this.style.background='#1560b8';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='var(--blue-500)';this.style.transform='none'">
           ✉️ &nbsp;Email Dr. Teoh Yun Xin
         </a>
+        <a href="https://forms.office.com/r/k35wDLhSf0" target="_blank" rel="noopener noreferrer"
+          style="display:inline-flex;align-items:center;gap:12px;background:white;color:var(--blue-700);padding:14px 28px;border-radius:100px;font-size:14px;font-weight:700;transition:box-shadow 0.25s,transform 0.25s;margin-top:12px;text-decoration:none;"
+          onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.2)';this.style.transform='translateY(-2px)'"
+          onmouseout="this.style.boxShadow='none';this.style.transform='none'">
+          📋 &nbsp;Register Your Interest →
+        </a>
       </div>
       <div class="reveal reveal-delay-2">
         <div class="contact-card">
@@ -1565,7 +1680,7 @@ footer {
             <div class="ci-icon">🏥</div>
             <div class="ci-text">
               <strong>Study Location</strong>
-              <span>Sunway Geo — Foot Nurse</span>
+              <span>Sunway Geo — Foot Nurse Clinical Space</span>
             </div>
           </div>
 
