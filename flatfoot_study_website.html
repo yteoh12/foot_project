@@ -601,35 +601,6 @@ a { color: inherit; text-decoration: none; }
   max-width: 860px;
   margin: 0 auto;
 }
-.video-wrapper video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.video-fallback {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  background: linear-gradient(135deg, var(--blue-950), var(--blue-800));
-  color: rgba(255,255,255,0.7);
-  font-size: 14px;
-}
-.video-play-icon {
-  width: 72px; height: 72px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.12);
-  border: 2px solid rgba(255,255,255,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: white;
-}
 
 /* ============================================================
    ELIGIBILITY
@@ -1353,16 +1324,14 @@ footer {
       <p class="section-body" style="margin:0 auto 40px;text-align:center;">Watch a demonstration of our plantar pressure assessment methodology and what to expect during your session.</p>
     </div>
     <div class="video-wrapper reveal">
-      <video controls preload="metadata" poster="">
-        <source src="Flatfoot_Pressure_Study.mp4" type="video/mp4">
-      </video>
-      <!-- Fallback shown when no video loads via JS -->
-      <div class="video-fallback" id="videoFallback" style="display:none;">
-        <div class="video-play-icon">▶</div>
-        <p style="color:rgba(255,255,255,0.6);font-size:13px;max-width:280px;text-align:center;line-height:1.6;">
-          Place <code style="background:rgba(255,255,255,0.1);padding:2px 6px;border-radius:4px;">Flatfoot_Pressure_Study.mp4</code> in the same folder as this file to display the video.
-        </p>
-      </div>
+      <iframe
+        src="https://drive.google.com/file/d/1f6VuELXovIHgCHlztrLhjqc3CYtSck67/view?usp=sharing"
+        title="Flatfoot Pressure Study — Plantar Pressure Assessment"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+      ></iframe>
     </div>
   </div>
 </section>
@@ -1683,23 +1652,6 @@ footer {
       animation-delay:${Math.random()*10}s;
     `;
     dotsContainer.appendChild(dot);
-  }
-
-  // Video fallback detection
-  const video = document.querySelector('video');
-  const fallback = document.getElementById('videoFallback');
-  if (video) {
-    video.addEventListener('error', () => {
-      video.style.display = 'none';
-      if (fallback) fallback.style.display = 'flex';
-    });
-    // If the video source is empty or invalid after a moment
-    setTimeout(() => {
-      if (video.readyState === 0 && video.networkState === 3) {
-        video.style.display = 'none';
-        if (fallback) fallback.style.display = 'flex';
-      }
-    }, 2000);
   }
 
   // Smooth scroll for anchor links
